@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/general.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/header.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/aside.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/footer.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/favourites.css"/>
+  <title>Library</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div id="logo">
+        LIBRARY
+      </div>
+      <div class="search-div">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search-icon.png">
+        </button>
+        <div id="searchResultsMain" class="search-results"></div>
+      </div>
+      <div class="right-section">
+        <button class="heart-button">
+          <img class="heart-icon" src="icons/heart-icon.png">
+          <span class="notification">0</span>
+        </button>
+        <button class="cart-button">
+          <img class="cart-icon" src="icons/shopping-bag-icon.png">
+          <span class="notification">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="aside">
+      <div id="events">
+        <p id="event-header">Upcoming Events</p>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event1Details');">
+            <div>Book Signing Event - April 20</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event2Details');">
+            <div>Author Meet & Greet - April 25</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event3Details');">
+            <div>Poetry Event - April 28</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event4Details');">
+            <div>Reading Night - May 10</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event5Details');">
+            <div>Local History Day - May 15</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event6Details');">
+            <div>Art and Illustration in Books - May 22</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event7Details');">
+            <div>The Future of Digital Books  - May 28</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event8Details');">
+            <div>Classic Film Series - June 11</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event9Details');">
+            <div>Workshop - June 18</div>
+          </a>
+          <a href="javascript:void(0);" class="event-link" onclick="openEventModal('event10Details');">
+            <div>Quiz Night - June 23</div>
+          </a>
+      </div>
+    </div>
+    <div class="main"></div>
+    <div id="favouritesPopup" class="favourites-popup">
+      <div class="popup-content">
+        <h2>My Favourites</h2>
+        <span class="close-button" onclick="toggleFavouritesPopup()">&times;</span>
+        <div class="favourites-container"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24819726.816896684!2d128.36553903369116!3d-67.68580086031903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1712317437361!5m2!1ssv!2sse" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="footer-info-container">
+        <div class="footer-info">
+          <p>Library Adress: 123 Book Lane, Readville, Bookland</p>
+          <p>Contact Us: library@mail.com | +1 234 567 890</p>
+          <p>&copy; 2024 Library. All rights reserved</p>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="icons/facebook_icon.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="icons/instagram_icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <img src="icons/twitter-icon.png" alt="Twitter" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="eventModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-event-button" onclick="closeModal()">&times;</span>
+      <h3 id="eventTitle"></h3>
+      <p id="eventDescription"></p>
+    </div>
+  </div>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/book.js"></script>
+  <script src="scripts/header.js"></script>
+  <script src="scripts/favourites.js"></script>
+  <script src="scripts/aside.js"></script>
+</body>
+</html>

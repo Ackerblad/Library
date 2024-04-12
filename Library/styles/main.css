@@ -1,0 +1,100 @@
+.main {
+  background-color: #fdfdfd;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book {
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin: 10px;
+}
+
+.book img {
+  max-width: 100%;
+  max-height: 150px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.title-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  margin-bottom: 7px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author-text {
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.favourite-button {
+  background-color: transparent;
+  border: none;
+}
+
+.favourite-icon {
+  width: 25px;
+}
+
+.favourite-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.borrow-button {
+  background-color: transparent;
+  border: none;
+}
+
+.borrow-icon {
+  width: 22px;
+}
+
+.borrow-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (min-width: 480px) {
+  .main  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

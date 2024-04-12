@@ -1,0 +1,130 @@
+.cart-main {
+  background-color: #fdfdfd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-main h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(59, 59, 168);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cart-container, .checkout-container {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 90%; 
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px; 
+}
+
+.cart-book {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0; 
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-book img {
+  max-width: 100%;
+  max-height: 150px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px; 
+}
+
+.book-details {
+  flex-grow: 1;
+  Display: flex;
+  flex-direction: column;
+}
+
+.book-title, .book-author {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  margin: 5px 0; 
+  max-width: 150px;
+}
+
+.book-title {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-button {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-left: auto;
+}
+
+.trash-bin-icon {
+  width: 19px;
+}
+
+.checkout-button {
+  height: 30px;
+  background-color: aliceblue;
+  border: 1px solid rgb(59, 59, 168);
+  border-radius: 10px;
+  color: rgb(59, 59, 168);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%; 
+  font-weight: 600;
+  align-self: center; 
+}
+
+.checkout-button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.remove-button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#empty-cart-message {
+  color: #707070; 
+  font-size: 18px; 
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+@media (min-width: 768px) {
+  .cart-container, .checkout-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-container, .checkout-container {
+    width: 50%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .cart-main {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
